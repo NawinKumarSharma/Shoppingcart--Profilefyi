@@ -72,7 +72,6 @@ export const ShopContextProvider: React.FC<{ children: ReactNode }> = ({
 
   const removeFromCart = (itemId: number) => {
     // @ts-ignore
-
     setCartItems((prev) => ({
       ...prev,
       [itemId]: Math.max((prev[itemId] || 0) - 1, 0),

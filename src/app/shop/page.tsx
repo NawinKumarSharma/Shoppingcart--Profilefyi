@@ -10,7 +10,7 @@ const Shop: React.FC = () => {
       <div className="shopTitle">
         <h1 className="mb-9">Ecommerce Shop</h1>
       </div>
-      <div className="products">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 px-10">
         {PRODUCTS.map((product) => (
           <Product key={product.id} data={product} />
         ))}
