@@ -40,37 +40,37 @@ export default function Header() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
             <Image
-              src="/vercel.svg"
+              src="/image.png"
               height={50}
               width={50}
               className="lg:hidden flex"
-              alt="logo"
+              alt="image"
             />
           </div>
         </SheetTrigger>
-        <SheetContent side="left">
-          <Link href="#" prefetch={false}>
-            <Image src="/vercel.svg" height={60} width={100} alt="logo" />
-          </Link>
-          <div className="grid gap-10 py-6">
-            {NavItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="flex w-full items-center py-2 text-lg hover:text-slate-600 font-semibold"
-                prefetch={false}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link href="/cart" className="right-0">
-              <ShoppingCart size={32} />
+          <SheetContent side="left">
+           <Link href="#" prefetch={false}>
+              <Image src="/image.png" height={60} width={60} alt="image" />
             </Link>
-          </div>
-        </SheetContent>
+            <div className="grid gap-10 py-6">
+              {NavItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex w-full items-center py-2 text-lg hover:text-slate-600 font-semibold"
+                  prefetch={false}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link href="/cart" className="right-0">
+                <ShoppingCart size={32} />
+              </Link>
+           </div>
+          </SheetContent>
       </Sheet>
       <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
-        <Image src="/vercel.svg" height={30} width={100} alt="logo" />
+        <Image src="/image.png" height={60} width={60} alt="image" />
       </Link>
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className="gap-8">
