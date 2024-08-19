@@ -32,7 +32,8 @@ const MenuIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
 export default function Header() {
   return (
     <header className="flex h-20 w-full shrink-0 bg-slate-500 items-center px-4 md:px-6 top-0 z-40 fixed py-3 backdrop-blur">
-      <Sheet>
+      {/* in case of more navItems , for mobile responsiveness */}
+      {/* <Sheet>
         <SheetTrigger asChild>
           <div className="flex flex-row justify-between items-end gap-x-96">
             <Button variant="outline" size="icon" className="lg:hidden">
@@ -68,11 +69,11 @@ export default function Header() {
               </Link>
            </div>
           </SheetContent>
-      </Sheet>
-      <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
+      </Sheet> */}
+      <Link href="#" className="mr-6 flex" prefetch={false}>
         <Image src="/image.png" height={60} width={60} alt="image" />
       </Link>
-      <NavigationMenu className="hidden lg:flex">
+      <NavigationMenu className="flex">
         <NavigationMenuList className="gap-8">
           {NavItems.map((item) => (
             <NavigationMenuLink key={item.href} asChild>
