@@ -22,7 +22,7 @@ interface ProductProps {
 export const Product: React.FC<ProductProps> = ({ data }) => {
   const { id, productName, price, productImage } = data;
   const context = useContext(ShopContext);
-  console.log(context);
+  // console.log(context);
 
   if (!context) {
     throw new Error(
@@ -31,10 +31,11 @@ export const Product: React.FC<ProductProps> = ({ data }) => {
   }
 
   const { addToCart, cartItems } = context;
+
   const cartItemCount = cartItems[id] || 0;
 
   return (
-    <Card className="rounded-none grid items-center h-full">
+    <Card className="rounded-none grid items-center h-full gap-y-3">
       <CardHeader className="bg-gray-50 aspect-1/85 items-center justify-center p-0">
         <figure className="h-full">
           <Image
@@ -54,7 +55,7 @@ export const Product: React.FC<ProductProps> = ({ data }) => {
       </CardContent>
       <CardFooter className="md:p-4 md:pt-0 p-2 pt-0">
         <Button
-          className="border w-full h-10 rounded-none"
+          className="border w-full h-10 rounded-none text-white bg-blue-800 hover:bg-blue-900"
           onClick={() => addToCart(id)}
         >
           Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
